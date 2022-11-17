@@ -1,17 +1,19 @@
 import {getUser} from "/src/js/services/user.js"
 import{getRepository} from "/src/js/services/repository.js"
+import {getEvent} from "/src/js/services/event.js"
 import {user} from "/src/js/objects/user.js"
 import{screen} from "/src/js/objects/screen.js"
 
+const searchBtn = document.querySelector("#btn-search")
+const searchInput = document.querySelector("#input-search")
 
-
-document.querySelector("#btn-search").addEventListener('click', () =>{
-    const userName = document.querySelector("#input-search").value
+searchBtn.addEventListener('click', () =>{
+    const userName = searchInput.value
     if(validateEmptyInput(userName)) return
     getUserData(userName)
 })
 
-document.querySelector("#input-search").addEventListener('keyup', (enter) =>{
+searchInput.addEventListener('keyup', (enter) =>{
     const userName = enter.target.value
     const key = enter.which || enter.keyCode
     const isEnterKeyPressed = key === 13
@@ -37,10 +39,14 @@ async function getUserData(userName){
         screen.renderNotFound()
         return
     }
-
+    
     const repositoriesResponse = await getRepository(userName)
+    const eventResponse = await getEvent(userName)
     
     user.setInfo(userResponse)
-    user.setRepositories(repositoriesResponse)   
+    user.setRepositories(repositoriesResponse)
+    user.setEvents(eventResponse)
     screen.renderUser(user)
 }
+
+

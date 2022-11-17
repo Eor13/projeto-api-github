@@ -80,7 +80,7 @@ main {
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
+  background-color: royalblue;
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -106,29 +106,37 @@ main {
 .container .profile-data .info img{
   width: 50%;
   border-radius: 50%;
-  border: 10px solid hotpink;
+  border: 10px solid royalblue;
 }
 
 .container .profile-data .info h1{
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .container .profile-data .info p{
-  font-size: 15px;  
+  font-size: 18px;  
   font-weight: 400;
   line-height: 23px;
 }
 
-/* REPOSITORIES */
-
-.container .profile-data .repositories h2{
-  margin-bottom: 30px;
-  text-align: center;
+.container .profile-data .info p strong{
+  font-weight: 700;
 }
 
-.container .profile-data .repositories ul{
+/* REPOSITORIES E EVENTS */
+
+.container .profile-data .repositories h2,
+.container .profile-data .events h2{
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container .profile-data .repositories ul
+,.container .profile-data .events ul
+{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -136,17 +144,62 @@ main {
 
 .container .profile-data .repositories ul li a{
   padding: 20px;
-  border: 1px solid grey;  
-  margin: 20px;
+  margin: 10px 10px 0 10px;
   display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
 
+.container .profile-data .repositories ul section{
+  border: 1px solid royalblue;  
+  margin: 5px;
+  border-radius: 7px;
+}
+
+
+.container .profile-data .repositories ul div{
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.container .profile-data .repositories ul div i{
+  color: #fff;
+  margin: 0 5px;
+  padding:  5px;
+  border-radius: 5px;
+  background-color: royalblue;
+}
+
+
+.container .profile-data .events ul li{
+  padding: 20px;
+  border: 1px solid royalblue;  
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .events ul .message{
+  background-color: rgba(65, 105, 225, 0.7);
+}
+.container .profile-data .events ul .notMessage{
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+.container .profile-data .events ul li p{
+  color: #fff;
+}
+
 .container .profile-data .repositories ul li a:hover{
-  background-color:hotpink;
+  background-color:royalblue;
   color: #fff
 }
+
+
 
 .container .profile-data.hide{
   display: none;

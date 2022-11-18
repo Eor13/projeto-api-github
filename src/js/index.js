@@ -1,8 +1,8 @@
-import {getUser} from "../services/user"
-import{getRepository} from "../services/repository.js"
-import {getEvent} from "../services/event.js"
-import {user} from "../objects/user.js"
-import{screen} from "../objects/screen.js"
+import {getUser} from "./services/user"
+import{getRepository} from "./services/repository.js"
+import {getEvent} from "./services/event.js"
+import {user} from "./objects/user.js"
+import{screen} from "./objects/screen.js"
 
 const searchBtn = document.querySelector("#btn-search")
 const searchInput = document.querySelector("#input-search")

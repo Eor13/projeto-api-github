@@ -16,10 +16,10 @@ const screen = {
             repositoriesItens +=`<section>
                                     <li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>
                                     <div>
-                                        <i>🍴 ${repo.forks_count} </i>
-                                        <i>⭐ ${repo.stargazers_count} </i>
-                                        <i>👀 ${repo.watchers_count} </i>
-                                        <i>📂 ${repo.language ?? "Sem linguagem definida"} </i>
+                                        <i>🍴 ${repo.forks} </i>
+                                        <i>⭐ ${repo.star} </i>
+                                        <i>👀 ${repo.watchers} </i>
+                                        <i>💻 ${repo.language ?? "Sem linguagem definida"} </i>
                                     </div>
                                 </section>`
         })

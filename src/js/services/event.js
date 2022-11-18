@@ -1,4 +1,4 @@
-import { baseUrl,repositoryQuantaty} from "/src/js/variables.js"
+import { baseUrl,repositoryQuantaty} from "../js/variables.js"
 
 
 async function getEvent(userName){

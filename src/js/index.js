@@ -1,4 +1,4 @@
-import {getUser} from "./services/user"
+import {getUser} from "../services/user"
 import{getRepository} from "../services/repository.js"
 import {getEvent} from "../services/event.js"
 import {user} from "../objects/user.js"

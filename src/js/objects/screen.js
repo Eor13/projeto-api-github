@@ -11,8 +11,12 @@ const screen = {
                                         
                                     </div>`
 
+        this.renderRepositories(user.repositories)
+        this.renderEvents(user.events)
+    },
+    renderRepositories(repositories){
         let repositoriesItens = ""
-        user.repositories.forEach(repo => {
+        repositories.forEach(repo => {
             repositoriesItens +=`<section>
                                     <li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>
                                     <div class="info">
@@ -24,24 +28,25 @@ const screen = {
                                 </section>`
         })
         
-        if(user.repositories.length > 0){
+        if(repositories.length > 0){
             this.userProfile.innerHTML += `<div class="repositories section">
                                                 <h2>Repositórios</h2>
                                                 <ul>${repositoriesItens}</ul>
-                                           </div>`
+                                            </div>`
         }
         
+    },
+    renderEvents(events){
         let eventsItens = ""
-        user.events.forEach(event =>{
-            if(event.payload.commits === undefined){
-                eventsItens += `<li class="notMessage"><h3>${event.repo.name} </h3> <p> - no commit</p></li>`
-            }else{
+        events.forEach(event =>{
+            
+            if(event.payload.commits){
                 eventsItens += `<li class="message"><h3>${event.repo.name} </h3> <p> - ${event.payload.commits[0].message}</p></li>`
             }
         })
 
         
-        if(user.events.length > 0){
+        if(events.length > 0){
             this.userProfile.innerHTML += `<div class=" events">
                                                 <h2>Eventos</h2>
                                                 <ul>${eventsItens}</ul>

@@ -1,8 +1,8 @@
-# Projeto-inicial-fetch-github-api
+# Projeto Api-GitHub
 Projeto realizado para Desafio do Curso DevQuest.
 
 <img src ="./src/gif/tela.gif" alt="gif da tela do projeto.">
-<a href="https://eor13.github.io/projeto-api-github-mundo-real-com-fetch/" target="_blank">Clique Aqui para ir direto para página</a>
+<a href="https://eor13.github.io/projeto-api-github/" target="_blank">Clique Aqui para ir direto para página</a>
 
 
 ## Tecnologias utilizadas
